@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a1775b6cb5527428ec14510d555c04, type: 3}
+  m_Name: App Data
+  m_EditorClassIdentifier: 
+  matchData: {fileID: 11400000, guid: 80026839837188a478e566f4a0b83d59, type: 2}
+  moneyData: {fileID: 11400000, guid: 8a7ed2319eb52504fa998f5ad51d8b9c, type: 2}
+  userData: {fileID: 11400000, guid: 0576f6ae889cdea48bf5066f4a2a1aff, type: 2}
+  characterData: {fileID: 11400000, guid: 6bc19f95bf3fb66418aaa3bad6003752, type: 2}
+  localizationData: {fileID: 11400000, guid: 25172f9669354ee4c89e8f8f7f2bf5b7, type: 2}
+  FueDataContainer: {fileID: 11400000, guid: 6f3506074791ec440bd6d44448f42839, type: 2}
+  LevelDataContainer: {fileID: 11400000, guid: 4717ade88772e594195bc422b97d177a, type: 2}
+  CustomDataContainer: {fileID: 11400000, guid: ba7013465de91d14d918cd6537a711eb,
+    type: 2}
