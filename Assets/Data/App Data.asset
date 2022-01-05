@@ -17,7 +17,8 @@ MonoBehaviour:
   userData: {fileID: 11400000, guid: 0576f6ae889cdea48bf5066f4a2a1aff, type: 2}
   characterData: {fileID: 11400000, guid: 6bc19f95bf3fb66418aaa3bad6003752, type: 2}
   localizationData: {fileID: 11400000, guid: 25172f9669354ee4c89e8f8f7f2bf5b7, type: 2}
+  giftData: {fileID: 11400000, guid: 4e0bae51b0a4f6d43899f4b55c9cde3b, type: 2}
+  timerData: {fileID: 11400000, guid: 0b380c1a4eb5b054da2a63cade805d96, type: 2}
   FueDataContainer: {fileID: 11400000, guid: 6f3506074791ec440bd6d44448f42839, type: 2}
   LevelDataContainer: {fileID: 11400000, guid: 4717ade88772e594195bc422b97d177a, type: 2}
-  CustomDataContainer: {fileID: 11400000, guid: ba7013465de91d14d918cd6537a711eb,
-    type: 2}
+  CustomDataContainer: {fileID: 11400000, guid: ba7013465de91d14d918cd6537a711eb, type: 2}

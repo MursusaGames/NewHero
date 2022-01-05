@@ -10,6 +10,8 @@ public class AppData : ScriptableObject
     public UserData userData;
     public CharacterData characterData;
     public LocalizationData localizationData;
+    public GiftData giftData;
+    public TimerData timerData;
 
     [Header("Containers")]
     

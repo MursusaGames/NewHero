@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 5921942368637382850}
   - component: {fileID: 7128008303741997387}
   - component: {fileID: 8151888831276469301}
+  - component: {fileID: 3411983549637208539}
   m_Layer: 5
   m_Name: RedRing
   m_TagString: Untagged
@@ -172,7 +173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.800003, y: 13.299999}
+  m_AnchoredPosition: {x: -2.800003, y: 13.299988}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5921942368637382850
@@ -233,3 +234,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3411983549637208539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417602997451360490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d340d32ef24eeab4a99a90eab996ecea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

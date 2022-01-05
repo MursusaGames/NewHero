@@ -30,6 +30,7 @@ public class MainMenuView : MonoBehaviour
     [SerializeField] private GameObject bookMenu;
     [SerializeField] private RectTransform worldRectTransform;
     [SerializeField] private GameObject buyEnergyView;
+    [SerializeField] private GameObject buyManaView;
     [SerializeField] private GameObject dailySetView;
     [SerializeField] private GameObject giftSetView;
     [SerializeField] private GameObject planet;
@@ -75,6 +76,14 @@ public class MainMenuView : MonoBehaviour
     public void HideBuyEnergyView()
     {
         buyEnergyView.SetActive(false);
+    }
+    public void ShowBuyManaView()
+    {
+        buyManaView.SetActive(true);
+    }
+    public void HideBuyManaView()
+    {
+        buyManaView.SetActive(false);
     }
     public void ShowDaylySetView()
     {

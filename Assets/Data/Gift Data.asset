@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ace0fe1b7daa1b24e9245762055a2fae, type: 3}
-  m_Name: User Data
+  m_Script: {fileID: 11500000, guid: 15a172047205f4a4f80009acd95ca9df, type: 3}
+  m_Name: Gift Data
   m_EditorClassIdentifier: 
-  nickname: Pol
-  coins: 0
-  crystals: 0
-  energy: 0
-  maxEnergy: 25
-  mana: 0
-  maxMana: 25
-  character: {fileID: 11400000, guid: 665e0fc5eed6e0f448fe8195a4cdcd83, type: 2}
+  days: 000000000000000000000000000000
+  currentDay: 0
