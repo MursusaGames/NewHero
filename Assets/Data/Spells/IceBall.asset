@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IceBall
   m_EditorClassIdentifier: 
   _customSkinType: 1
-  _customSprites: {fileID: 21300000, guid: 4cd3cd2300f137346841a0823b317d5f, type: 3}
+  _customSprites: {fileID: -1764117502, guid: c6af5af6f7125d941b2bf79b15b0ca19, type: 3}
   _customSubscribe: "\u0423\u0440\u043E\u043D \u0437\u0430\u0432\u0438\u0441\u0438\u0442
     \u043E\u0442 \u0441\u043E\u043F\u0440\u043E\u0442\u0438\u0432\u043B\u0435\u043D\u0438\u044F
     \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430 \u043C\u0430\u0433\u0438\u0438

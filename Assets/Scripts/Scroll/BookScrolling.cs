@@ -27,17 +27,25 @@ public class BookScrolling : MonoBehaviour
     Vector2[] panPos;
     Vector2[] panScale;
     Vector2 contentVector;
-
+    [SerializeField] private List<string> animatorBools;
     RectTransform contentRect;
     int selectedPanID;
     public bool isScrolling;
     public string buyBtnTitle = "BUY";
+    private bool isStart;
 
     public ScrollRect scrollRect;
     //[SerializeField] GameObject brainPrefab;
     //[SerializeField] GameObject swipeHand;
-   
 
+    private void OnEnable()
+    {
+        if (!isStart) return;
+        for(int i = 0; i < instPans.Length; i++)
+        {
+            instPans[i].GetComponentInChildren<Animator>().SetBool(animatorBools[i], true);
+        }
+    }
     private void Start()
     {
         panCount = System.Enum.GetValues(typeof(BookType)).Length;       
@@ -49,13 +57,15 @@ public class BookScrolling : MonoBehaviour
         for (int i = 0; i < panCount; i++)
         {
             instPans[i] = Instantiate(panPrefab, transform, false);
-            instPans[i].GetComponentInChildren<Image>().sprite = spellSystem.customsSprites[i];            
+            instPans[i].GetComponentInChildren<Animator>().SetBool(animatorBools[i], true);
+            //instPans[i].GetComponentInChildren<Image>().sprite = spellSystem.customsSprites[i];            
             if (i == 0) continue;
 
             var tmpX = instPans[i - 1].transform.localPosition.x + panPrefab.GetComponent<RectTransform>().sizeDelta.x/2 + panSpace;
             instPans[i].transform.localPosition = new Vector2(tmpX, instPans[i].transform.localPosition.y);
             panPos[i] = -instPans[i].transform.localPosition;
         }
+        isStart = true;
     }
 
     private void FixedUpdate()

@@ -9,6 +9,7 @@ public class MainMenuSystem : BaseMonoSystem
    
     [SerializeField] private GameObject view;
     [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject planet;
 
     public override void Init(AppData data)
     {
@@ -40,10 +41,12 @@ public class MainMenuSystem : BaseMonoSystem
     public void ShowSettingsMenu()
     {
         settingsMenu.SetActive(true);
+        planet.SetActive(false);
     }
     public void HideSettingsMenu()
     {
         settingsMenu.SetActive(false);
+        planet.SetActive(true);
     }
 
     public void GameInitializing()

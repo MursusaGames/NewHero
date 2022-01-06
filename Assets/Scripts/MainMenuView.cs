@@ -72,18 +72,22 @@ public class MainMenuView : MonoBehaviour
     public void ShowBuyEnergyView()
     {
         buyEnergyView.SetActive(true);
+        planet.SetActive(false);
     }
     public void HideBuyEnergyView()
     {
         buyEnergyView.SetActive(false);
+        planet.SetActive(true);
     }
     public void ShowBuyManaView()
     {
         buyManaView.SetActive(true);
+        planet.SetActive(false);
     }
     public void HideBuyManaView()
     {
         buyManaView.SetActive(false);
+        planet.SetActive(true);
     }
     public void ShowDaylySetView()
     {
