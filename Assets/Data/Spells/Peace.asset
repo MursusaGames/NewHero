@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64452cdca696a54419006fb30253ae97, type: 3}
+  m_Name: Peace
+  m_EditorClassIdentifier: 
+  _customSkinType: 7
+  _customSprites: {fileID: 1332384397, guid: c6c00a895b276eb45a163473dcf7243d, type: 3}
+  _customSubscribe: "\u041D\u0430 \u043A\u0430\u043A\u043E\u0435 \u0442\u043E \u0432\u0440\u0435\u043C\u044F
+    \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A \u043D\u0435 \u0430\u0442\u0430\u043A\u0443\u0435\u0442."
+  _customNames: "\u041C\u0438\u0440\u043E\u043B\u044E\u0431\u0438\u0435."
+  _customSubscribeEN: For a while the enemy does not attack
+  _customNamesEN: Peace.
+  _customPrices: " \u041C\u0430\u043D\u0430: 15."

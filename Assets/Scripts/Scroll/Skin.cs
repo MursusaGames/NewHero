@@ -4,28 +4,16 @@ using System;
 
 public enum BookType
 {
-    //NotFunctional
-        Fire,
-        Ice,    
-        Stown
-       // Jetpack,
-        //Cyber,
-        //Phone,
-
-    //NotReleased
-        //Astronaut,
-        //GlassesMustache,
-        //SheriffStar,
-        //Student,
-        //Medal,
-        //Stone,
-        //Pogo,
-        //Pharaoh,
-        //Broker,
-        //KatanaNinja,
-        //PriceTagsStickerPromo,
-        //Noob,
-        //Sabziro,
+    Fire,
+    Ice,
+    Stown,
+    LookOfDeath,
+    Poicon,
+    KillSoul,
+    Heal,
+    Peace,
+    Immortality
+        
 }
 
 public class Skin

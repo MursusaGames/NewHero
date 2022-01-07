@@ -33,7 +33,8 @@ public class MainMenuView : MonoBehaviour
     [SerializeField] private GameObject buyManaView;
     [SerializeField] private GameObject dailySetView;
     [SerializeField] private GameObject giftSetView;
-    [SerializeField] private GameObject planet;
+    [SerializeField] private Canvas canvas;
+    
     private Vector3 previousPos;
 
     private void Start()
@@ -42,28 +43,23 @@ public class MainMenuView : MonoBehaviour
     }
     public void ShowEquipment()
     {
-        ChoiceMenu(equipmentMenu);
-        planet.SetActive(false);
+        ChoiceMenu(equipmentMenu);        
     }
     public void ShowShop()
     {
-        ChoiceMenu(shopMenu);
-        planet.SetActive(false);
+        ChoiceMenu(shopMenu);        
     }
     public void ShowWorld()
     {
-        ChoiceMenu(worldMenu);
-        planet.SetActive(true);
+        ChoiceMenu(worldMenu);        
     }
     public void ShowTalant()
     {
-        ChoiceMenu(talantMenu);
-        planet.SetActive(false);
+        ChoiceMenu(talantMenu);        
     }
     public void ShowBook()
     {
-        ChoiceMenu(bookMenu);
-        planet.SetActive(false);
+        ChoiceMenu(bookMenu);        
     }
     public void PlayGame()
     {
@@ -71,43 +67,39 @@ public class MainMenuView : MonoBehaviour
     }
     public void ShowBuyEnergyView()
     {
-        buyEnergyView.SetActive(true);
-        planet.SetActive(false);
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        buyEnergyView.SetActive(true);        
     }
     public void HideBuyEnergyView()
     {
         buyEnergyView.SetActive(false);
-        planet.SetActive(true);
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
     }
     public void ShowBuyManaView()
     {
-        buyManaView.SetActive(true);
-        planet.SetActive(false);
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        buyManaView.SetActive(true);        
     }
     public void HideBuyManaView()
     {
         buyManaView.SetActive(false);
-        planet.SetActive(true);
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
     }
     public void ShowDaylySetView()
     {
-        dailySetView.SetActive(true);
-        planet.SetActive(false);
+        dailySetView.SetActive(true);        
     }
     public void HideDaylySetView()
     {
-        dailySetView.SetActive(false);
-        planet.SetActive(true);
+        dailySetView.SetActive(false);        
     }
     public void ShowGiftSetView()
     {
-        giftSetView.SetActive(true);
-        planet.SetActive(false);
+        giftSetView.SetActive(true);        
     }
     public void HideGiftSetView()
     {
-        giftSetView.SetActive(false);
-        planet.SetActive(true);
+        giftSetView.SetActive(false);        
     }
 
     public void SetActivBtn(int id)

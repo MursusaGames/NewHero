@@ -24,4 +24,4 @@ MonoBehaviour:
   _customSubscribeEN: The damage depends on the opponent's resistance to elemental
     magic. At 100% resistance, damage is 10, at 0% damage is 120.
   _customNamesEN: Ice
-  _customPrices: 10-120
+  _customPrices: "\u041C\u0430\u043D\u0430: 7."

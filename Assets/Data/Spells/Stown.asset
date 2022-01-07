@@ -24,4 +24,4 @@ MonoBehaviour:
   _customSubscribeEN: The damage depends on the opponent's resistance to elemental
     magic. At 100% resistance, damage is 20, at 0% damage is 150.
   _customNamesEN: Stown
-  _customPrices: 20-150
+  _customPrices: "\u041C\u0430\u043D\u0430: 10."

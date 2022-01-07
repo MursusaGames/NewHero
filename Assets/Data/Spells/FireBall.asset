@@ -24,4 +24,4 @@ MonoBehaviour:
   _customSubscribeEN: The damage depends on the opponent's resistance to fire magic.
     At 100% resistance, damage is 5, at 0% damage is 100.
   _customNamesEN: FireBall
-  _customPrices: 5 - 100
+  _customPrices: "\u041C\u0430\u043D\u0430: 5."

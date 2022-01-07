@@ -28,11 +28,21 @@ public class BookScrolling : MonoBehaviour
     Vector2[] panScale;
     Vector2 contentVector;
     [SerializeField] private List<string> animatorBools;
+    private List<Animator> animators = new List<Animator>();
     RectTransform contentRect;
     int selectedPanID;
     public bool isScrolling;
     public string buyBtnTitle = "BUY";
     private bool isStart;
+    private int magicIndex;
+    private bool changeIndex;
+    public int MagicIndex
+    {
+        get { return magicIndex; }
+        set { magicIndex = value;
+            changeIndex = true;
+        }
+    }
 
     public ScrollRect scrollRect;
     //[SerializeField] GameObject brainPrefab;
@@ -43,12 +53,12 @@ public class BookScrolling : MonoBehaviour
         if (!isStart) return;
         for(int i = 0; i < instPans.Length; i++)
         {
-            instPans[i].GetComponentInChildren<Animator>().SetBool(animatorBools[i], true);
+            instPans[i].GetComponentInChildren<Animator>().SetTrigger(animatorBools[i]);
         }
     }
     private void Start()
     {
-        panCount = System.Enum.GetValues(typeof(BookType)).Length;       
+        panCount = System.Enum.GetValues(typeof(BookType)).Length/3;       
         panScale = new Vector2[panCount];
         contentRect = GetComponent<RectTransform>();
         panPos = new Vector2[panCount];
@@ -57,7 +67,8 @@ public class BookScrolling : MonoBehaviour
         for (int i = 0; i < panCount; i++)
         {
             instPans[i] = Instantiate(panPrefab, transform, false);
-            instPans[i].GetComponentInChildren<Animator>().SetBool(animatorBools[i], true);
+            animators.Add(instPans[i].GetComponentInChildren<Animator>());
+            animators[i].SetTrigger(animatorBools[i]);
             //instPans[i].GetComponentInChildren<Image>().sprite = spellSystem.customsSprites[i];            
             if (i == 0) continue;
 
@@ -113,7 +124,17 @@ public class BookScrolling : MonoBehaviour
 
     public void UpgradePanel()
     {
-        panel.ShowPanel(selectedPanID);
+
+        panel.ShowPanel(magicIndex + selectedPanID);
+        if (changeIndex)
+        {
+            for (int i = 0; i < animators.Count; i++)
+            {
+                animators[i].SetTrigger(animatorBools[i + magicIndex]);
+            }
+            changeIndex = false;
+        }
+        
         if (0 <= selectedPanID && System.Enum.GetValues(typeof(BookType)).Length >= selectedPanID)
         {
             //subscribeText.text = customSystem.customsSubscribe[selectedPanID];
