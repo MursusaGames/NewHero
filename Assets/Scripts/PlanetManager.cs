@@ -13,6 +13,6 @@ public class PlanetManager : MonoBehaviour
 
     private void OnDisable()
     {
-        planet.SetActive(false);
+        if(planet) planet.SetActive(false);
     }
 }

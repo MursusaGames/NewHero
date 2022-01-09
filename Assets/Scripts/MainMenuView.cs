@@ -87,19 +87,23 @@ public class MainMenuView : MonoBehaviour
     }
     public void ShowDaylySetView()
     {
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         dailySetView.SetActive(true);        
     }
     public void HideDaylySetView()
     {
-        dailySetView.SetActive(false);        
+        dailySetView.SetActive(false);
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
     }
     public void ShowGiftSetView()
     {
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         giftSetView.SetActive(true);        
     }
     public void HideGiftSetView()
     {
-        giftSetView.SetActive(false);        
+        giftSetView.SetActive(false);
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
     }
 
     public void SetActivBtn(int id)
