@@ -17,5 +17,9 @@ public class PlayerBullet : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
+        if (other.gameObject.CompareTag(nameof(Wall)))
+        {
+            Destroy(gameObject);
+        }
     }
 }

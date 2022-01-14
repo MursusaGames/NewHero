@@ -5,23 +5,25 @@ using UnityEngine;
 public class PlayerBounds : MonoBehaviour
 {
     private Vector3 pos;
+    [SerializeField] private float xBoards = 2.5f;
+    [SerializeField] private float zBoards = 13.5f;
 
-        
+
     void Update()
     {
         pos = transform.position;
-        if (transform.position.x > 2)
+        if (transform.position.x > xBoards)
         {
-            pos.x = 2;            
+            pos.x = xBoards;            
         }
-        else if(transform.position.x < -2)
+        else if(transform.position.x < -xBoards)
         {
-            pos.x = -2;            
+            pos.x = -xBoards;            
         }
 
-        if (transform.position.z > 13.5f)
+        if (transform.position.z > zBoards)
         {
-            pos.z = 13.5f;            
+            pos.z = zBoards;            
         }
         else if (transform.position.z < 0)
         {

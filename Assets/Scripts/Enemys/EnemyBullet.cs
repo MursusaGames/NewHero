@@ -27,6 +27,10 @@ public class EnemyBullet : MonoBehaviour
         {
             other.gameObject.GetComponent<UnitController>().TakeDamage(damage);
             Destroy(gameObject);
-        }        
+        }
+        if (other.gameObject.CompareTag(nameof(Wall)))
+        {
+            Destroy(gameObject);
+        }
     }    
 }
