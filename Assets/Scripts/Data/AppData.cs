@@ -18,4 +18,5 @@ public class AppData : ScriptableObject
     public FueDataContainer FueDataContainer;
     public LevelDataContainer LevelDataContainer;
     public CustomsDataContainer CustomDataContainer;
+    public InventoryDataContainer InventoryDataContainer;
 }

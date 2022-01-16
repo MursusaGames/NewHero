@@ -11,13 +11,16 @@ public class PlayerMovementSystem : BaseMonoSystem
     private GameObject target;
     private List<UnitController> units;
     private bool endGame;
+    [SerializeField] private GameObject axe;
+    public AppData _data;
 
 
 
     public override void Init(AppData data)
     {
         base.Init(data);
-        SetObservables();      
+        SetObservables();
+        
     }
     private void OnDisable()
     {
@@ -27,6 +30,10 @@ public class PlayerMovementSystem : BaseMonoSystem
     {
         main = Camera.main;
         units = new List<UnitController>();
+        if(data.userData.weapon == UserData.Weapon.axe)
+        {
+            axe.SetActive(true);
+        }
     }
 
     private void SetObservables()

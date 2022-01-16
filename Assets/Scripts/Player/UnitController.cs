@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UnitController : MonoBehaviour
 {
-    private LevelDataSystem levelSystem;
+    
     private SettingMenuSystem settingsMenu;
     [SerializeField] private float _moveSpeed = 100;
     [SerializeField] private float _rotateSpeed = 1;
@@ -50,7 +50,7 @@ public class UnitController : MonoBehaviour
         _rigidbody = this.GetComponent<Rigidbody>();        
         movSystem = FindObjectOfType<PlayerMovementSystem>();
         settingsMenu = FindObjectOfType<SettingMenuSystem>();
-        levelSystem = FindObjectOfType<LevelDataSystem>();
+        
         gameController = FindObjectOfType<GameController>();
     }
     private void OnEnable()
@@ -140,7 +140,7 @@ public class UnitController : MonoBehaviour
 
     protected void FixedUpdate()
     {
-        if (_isWin) return;
+        if (_isWin ) return;
         Timer();
         if (isSearch && !isRun)
         {
@@ -150,7 +150,7 @@ public class UnitController : MonoBehaviour
     }
     private void FindTarget()
     {
-        if (_isWin) return;
+        if (_isWin || movSystem._data.userData.weapon == UserData.Weapon.axe) return;
         var enemys = gameController.enemysInLevel;
         float dystance = 100f;
         for(int i = 0; i < enemys.Count; i++)
@@ -167,12 +167,26 @@ public class UnitController : MonoBehaviour
     }
     public void Attack()
     {
-        if (_isWin || !target) return;
+        if (_isWin || !target || movSystem._data.userData.weapon == UserData.Weapon.axe) return;
         var bullet = Instantiate(stownBullet, stownBulletStartPoint.position, Quaternion.identity);
         var rg = bullet.GetComponent<Rigidbody>();
         Vector3 offsetDir = new Vector3(target.position.x, target.position.y- yOffset, target.position.z);
         Vector3 throwDir = (offsetDir - transform.position).normalized;
         rg.AddForce(throwDir * force, ForceMode.Impulse);
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(movSystem._data.userData.weapon == UserData.Weapon.axe && other.gameObject.CompareTag("Enemy"))
+        {
+            _animator.SetBool("Axe", true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (movSystem._data.userData.weapon == UserData.Weapon.axe && other.gameObject.CompareTag("Enemy"))
+        {
+            _animator.SetBool("Axe", false);
+        }
     }
 }

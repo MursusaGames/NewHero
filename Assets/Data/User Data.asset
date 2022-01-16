@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace0fe1b7daa1b24e9245762055a2fae, type: 3}
   m_Name: User Data
   m_EditorClassIdentifier: 
+  weapon: 1
   nickname: Pol
   coins: 0
   crystals: 0
@@ -19,4 +20,8 @@ MonoBehaviour:
   maxEnergy: 25
   mana: 0
   maxMana: 25
+  attakPoint: 20
+  defPoint: 15
+  speedPoint: 10
+  livePoint: 55
   character: {fileID: 11400000, guid: 665e0fc5eed6e0f448fe8195a4cdcd83, type: 2}

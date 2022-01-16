@@ -6,6 +6,7 @@ using UnityEngine;
 public class InventoryData : ScriptableObject
 {
     public Sprite none;
+    public Sprite blueNone;
     public Sprite axe;
     public Sprite bow;
     public Sprite luck;   

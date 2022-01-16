@@ -22,3 +22,4 @@ MonoBehaviour:
   FueDataContainer: {fileID: 11400000, guid: 6f3506074791ec440bd6d44448f42839, type: 2}
   LevelDataContainer: {fileID: 11400000, guid: 4717ade88772e594195bc422b97d177a, type: 2}
   CustomDataContainer: {fileID: 11400000, guid: ba7013465de91d14d918cd6537a711eb, type: 2}
+  InventoryDataContainer: {fileID: 11400000, guid: 99cc7abd8a8bffa4693ba1e0eb17f143, type: 2}

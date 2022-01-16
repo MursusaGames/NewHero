@@ -7,6 +7,7 @@ public class LevelDataSystem : BaseMonoSystem
     private int _currentLevel;
     private int numberOfLevels;
     public int _ringWidth = 10;
+    public AppData _data;
 
     public int CurrentLevel
     {
@@ -35,6 +36,7 @@ public class LevelDataSystem : BaseMonoSystem
     {
         base.Init(data);
         InitializeData();
+        _data = data;
     }
     private void InitializeData()
     {

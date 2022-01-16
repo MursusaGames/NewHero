@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class InventoryView : MonoBehaviour
 {
     [SerializeField] private List<Image> boxes = new List<Image>();
+    [SerializeField] private List<GameObject> weapons = new List<GameObject>();
     [SerializeField] private InventoryData inventoryData;
+    [SerializeField] private InventorySystem inventorySystem;
     private const string Init_Box_Value = "none";
     public int freeInventoryBox; 
 
@@ -27,6 +29,7 @@ public class InventoryView : MonoBehaviour
     }
     private void OnEnable()
     {
+        inventorySystem.SetInfoPanel();
         for(int i = 0; i < boxes.Count; i++)
         {
             var sprite = PlayerPrefs.GetString(i.ToString());
@@ -47,6 +50,20 @@ public class InventoryView : MonoBehaviour
             }
             
         }
-        freeInventoryBox = PlayerPrefs.GetInt("FreeBox");        
+        freeInventoryBox = PlayerPrefs.GetInt("FreeBox");
+        if((int)inventorySystem.data.userData.weapon > 0)
+        {
+            inventorySystem.SetSlotImages();
+            weapons[(int)inventorySystem.data.userData.weapon - 1].SetActive(true);
+        }
+    }  
+    
+    public void SetBoxes(int id,Sprite sprite)
+    {
+        boxes[id].sprite = sprite;
+        PlayerPrefs.SetString(id.ToString(), sprite.name.ToString());
+        weapons[(int)inventorySystem.data.userData.weapon - 1].SetActive(true);
     }
+    
 }
+
